@@ -20,4 +20,7 @@ class AnimalsController < ApplicationController
 
   def destroy
   end
+
+  def dog; end
+
 end
