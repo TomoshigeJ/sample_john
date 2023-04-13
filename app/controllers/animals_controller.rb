@@ -23,4 +23,6 @@ class AnimalsController < ApplicationController
 
   def dog; end
 
+  def js; end
+
 end

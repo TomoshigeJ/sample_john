@@ -2,7 +2,10 @@ Rails.application.routes.draw do
   root :to => 'static_pages#top'
   resources :users
   resources :animals do
-    get 'dog', on: :collection
+    collection do
+      get 'dog'
+      get 'js'
+    end
   end
 
   get 'login' => 'user_sessions#new', :as => :login
