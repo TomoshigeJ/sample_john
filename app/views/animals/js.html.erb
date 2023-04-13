@@ -5,5 +5,12 @@
 <%= link_to 'new window2', 'https://www.google.co.jp/', target: '_blank' %>
 
 <script>
-  alert('画面にアラートを表示させる');
+
+  const result = confirm('犬になりますか？');
+  if (result) {
+	  alert('Hello Dog World');
+  } else {
+	  alert('仔犬からやり直して下さい');
+  }
+  
 </script>
