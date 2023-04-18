@@ -6,6 +6,8 @@ Rails.application.routes.draw do
       get 'dog'
       get 'js'
       get 'jsapp'
+      get 'jsapp2'
+      get 'jsapp3'
     end
   end
 
