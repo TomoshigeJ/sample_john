@@ -23,6 +23,9 @@
 
 <a class='link' href='https://www.google.co.jp/'>Googleへのリンク(確認有)</a>
 
+<!-- その他テスト用-->
+<button class='alert-button'>アラートボタン</button>
+
 
 <script>
 
@@ -69,6 +72,12 @@
       console.log('キャンセル=falseの処理で規定の動作を停止する!!')
       alert('キャンセルされました');
     }
+  });
+
+  // その他テスト用
+  const alertButton = document.querySelector('.alert-button');
+  alertButton.addEventListener(`click`, function() {
+    alert('アラート表示');
   });
 
 </script>

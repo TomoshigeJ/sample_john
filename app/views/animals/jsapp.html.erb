@@ -1,0 +1,35 @@
+<h1>js action</h1>
+<p>JavaScriptで簡単なアプリ①</p>
+<div class="border"></div>
+
+<div class='m-4'>①カウントアップボタン</div>
+
+<div id='counter' class='ml-4'>0</div>
+<button id='countup' class='ml-4 mb-4' type='button'>+1</button>
+
+<script>
+
+  const counter = document.getElementById('counter');
+  const countUp = document.getElementById('countup');
+
+  countUp.addEventListener('click', function() {
+    const counterNum = parseInt(counter.textContent);
+    if (counterNum === 10) {
+      alert('カウントアップは10までです');
+    } else {
+      const result = counterNum + 1;
+      counter.textContent = result
+    };
+  });
+
+  /* 別解
+  const countupButton = document.querySelector('#countup');
+  countupButton.addEventListener('click', function() {
+	  const counter = document.querySelector('#counter');
+	  counter.textContent = parseInt(counter.textContent) + 1;
+  });
+  */
+
+</script>
+
+<div class="border"></div>
