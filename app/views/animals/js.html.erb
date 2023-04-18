@@ -1,10 +1,34 @@
 <h1>js action</h1>
 <p>すらすらわかるJavaScript新版</p>
 
-<a href="https://www.google.co.jp/" target="_blank">super John</a>
+<a href="https://www.google.co.jp/" target="_blank">super John</a><br>
 <%= link_to 'new window2', 'https://www.google.co.jp/', target: '_blank' %>
+<div class='profile' data-id='101' data-user-name='john'>john</div>
+<p class='score' data-score='100'>100点じょん</p>
+<p class='font'>フォントサイズジョン</p>
+<div class='content'>
+  <p class='first'>じょん1</p>
+  <p class='second'>じょん2</p>
+</div>
+
+<!-- イベント用test -->
+<button type='button'>じょんボタン</button>
+
 
 <script>
+  // 関数を定義して関数名を渡す
+  function alertMessage() {
+    alert('じょんボタンが押下されました');
+  }
+
+  const button = document.querySelector('button');
+  button.addEventListener('click', alertMessage);
+
+
+
+
+
+
 
   const result = confirm('犬になりますか？');
   if (result) {
