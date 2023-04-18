@@ -1,8 +1,11 @@
 <h1>js action</h1>
 <p>すらすらわかるJavaScript新版</p>
 
+<!-- aタグとlink_toで新しいウィンドウを開くリンク -->
 <a href="https://www.google.co.jp/" target="_blank">super John</a><br>
 <%= link_to 'new window2', 'https://www.google.co.jp/', target: '_blank' %>
+
+<!-- JS練習用(console)-->
 <div class='profile' data-id='101' data-user-name='john'>john</div>
 <p class='score' data-score='100'>100点じょん</p>
 <p class='font'>フォントサイズジョン</p>
@@ -16,9 +19,14 @@
 <button class='c-button' type='button'>確認ボタン</button>
 <button class='r-button' type='button'>削除イベント</button>
 
+<button class='e-button' type='button'><span>私はspan</span>私はボタン</button>
+
+<a class='link' href='https://www.google.co.jp/'>Googleへのリンク(確認有)</a>
+
 
 <script>
 
+  // 関数式→イベント
   const jButton = document.querySelector('.j-alert');
   jButton.addEventListener('click', function () {
 	  alert('じょんボタンが押下されました');
@@ -34,6 +42,7 @@
       }
   });
 
+  // イベントの削除
   const rButton = document.querySelector('.r-button');
   function rEvent () {
     alert('私は削除されるイベント');
@@ -41,6 +50,25 @@
   rButton.addEventListener('click', rEvent);
   rButton.removeEventListener('click', rEvent);
 
-  
-  
+  // イベントオブジェクト(ボタンのテキストを変えてみる)
+  const eButton = document.querySelector('.e-button');
+  eButton.addEventListener('click', function(event) {
+	  const button = event.currentTarget;
+    button.textContent = '変更されたボタン';
+    console.log(event.currentTarget);
+    console.log(event.target);
+  });
+
+  // preventDefault()で規定の動作を停止する
+  const link = document.querySelector('.link');
+  link.addEventListener('click', function(event) {
+    if (confirm('本当にググりますか？')) {
+      console.log('OKが押された=trueなので実行!!');
+    } else {
+      event.preventDefault();
+      console.log('キャンセル=falseの処理で規定の動作を停止する!!')
+      alert('キャンセルされました');
+    }
+  });
+
 </script>
