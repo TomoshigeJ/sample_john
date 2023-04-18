@@ -2,4 +2,44 @@
 <p>JavaScriptで簡単なアプリ③</p>
 <div class="border"></div>
 
-<div class='m-4'>③</div>
+<div class='m-4'>③簡易メモ</div>
+
+<input type='text' class='new-memo m-2'>
+<button type='button' class='add-memo btn btn-primary m-2'>メモ追加</button>
+<ul class='memo-list'>
+  <li>メモです</li>
+</ul>
+
+<script>
+
+  /* コンソール確認用(後でイベント登録)
+  // 入力内容の取得
+  const newMemoInput = document.querySelector('.new-memo');
+  console.log(newMemoInput.value);
+
+  // <li>要素の作成と追加処理
+  const newMemo = document.createElement('li');
+  newMemo.textContent = newMemoInput.value;
+
+  const memoList = document.querySelector('.memo-list');
+  memoList.append(newMemo);
+  */
+
+  const addMemoButton = document.querySelector('.add-memo');
+  addMemoButton.addEventListener(`click`, function() {
+    // 入力内容の取得
+    const newMemoInput = document.querySelector('.new-memo');
+
+    // <li>要素の作成と入力内容を代入
+    const newMemo = document.createElement('li');
+    newMemo.textContent = newMemoInput.value;
+
+    // 作成した<li>要素を<ul>要素の子要素の末尾に追加
+    const memoList = document.querySelector('.memo-list');
+    memoList.append(newMemo);
+
+    // テキスト入力内容のクリア
+    newMemoInput.value = '';
+  });
+
+</script>
