@@ -12,29 +12,35 @@
 </div>
 
 <!-- イベント用test -->
-<button type='button'>じょんボタン</button>
+<button class='j-alert' type='button'>じょんボタン</button>
+<button class='c-button' type='button'>確認ボタン</button>
+<button class='r-button' type='button'>削除イベント</button>
 
 
 <script>
-  // 関数を定義して関数名を渡す
-  function alertMessage() {
-    alert('じょんボタンが押下されました');
+
+  const jButton = document.querySelector('.j-alert');
+  jButton.addEventListener('click', function () {
+	  alert('じょんボタンが押下されました');
+  });
+
+  const cButton = document.querySelector('.c-button');
+  cButton.addEventListener('click', function () {
+    result = confirm('犬になりますか？');
+      if (result) {
+        alert('Hello Dog World');
+      } else {
+        alert('仔犬からやり直して下さい');
+      }
+  });
+
+  const rButton = document.querySelector('.r-button');
+  function rEvent () {
+    alert('私は削除されるイベント');
   }
+  rButton.addEventListener('click', rEvent);
+  rButton.removeEventListener('click', rEvent);
 
-  const button = document.querySelector('button');
-  button.addEventListener('click', alertMessage);
-
-
-
-
-
-
-
-  const result = confirm('犬になりますか？');
-  if (result) {
-	  alert('Hello Dog World');
-  } else {
-	  alert('仔犬からやり直して下さい');
-  }
+  
   
 </script>
