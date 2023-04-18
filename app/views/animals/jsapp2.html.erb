@@ -26,10 +26,10 @@
     dummyContent.textContent += ` テキスト ${i} `;
   }
 
-  // スクロールしたときに「上に戻る」ボタンを表示する
+  // スクロールしたときに「上に戻る」ボタンを表示する(画面の半分を超えたら表示)
   window.addEventListener('scroll', function() {
     const button = document.querySelector('.moveToTop');
-    if (window.scrollY >= 200) {
+    if (window.scrollY >= document.body.clientHeight / 2) { // document.body.clienHeight でページ全体の高さを取得
       button.style.display = 'block';
     } else {
       button.style.display = 'none';
