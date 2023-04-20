@@ -7,6 +7,14 @@
 <button id='element'>ボタンです</button>
 
 <script>
+  button = document.getElementById('element');
+  console.log(button);
 
+  button.addEventListener('click', function(event) {
+    console.log(event.type);
+    console.log(event.currentTarget);
+    console.log(`${event.clientX} : ${event.clientY}`);
+    console.log(event.altKey);
+  });
 
 </script>
