@@ -2,6 +2,7 @@ class AnimalsController < ApplicationController
   skip_before_action :require_login
   
   def new
+    @animal = Animal.new
   end
 
   def create
@@ -22,13 +23,11 @@ class AnimalsController < ApplicationController
   end
 
   def dog; end
-
   def js; end
-
   def jsapp; end
-
   def jsapp2; end
-
   def jsapp3; end
+
+  private
 
 end
