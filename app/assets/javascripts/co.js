@@ -16,3 +16,13 @@ function previewImage() {
   console.log(file);
   console.log(reader);
 }
+
+function addButton() {
+  const button = this.event.target;
+  const buttonText = button.textContent
+  const newElement = document.createElement('button');
+  newElement.textContent = buttonText;
+
+  const addTarget = document.querySelector('.add-button');
+  addTarget.append(newElement);
+}
