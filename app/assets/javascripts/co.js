@@ -11,4 +11,8 @@ function previewImage() {
   if (file) {
       reader.readAsDataURL(file);
   }
+
+  console.log(target);
+  console.log(file);
+  console.log(reader);
 }
