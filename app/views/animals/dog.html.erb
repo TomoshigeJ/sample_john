@@ -8,12 +8,24 @@
 
 <div class="border"></div>
 
+<!-- JSは別ファイルに書いてみる -->
 <p>イベントボタン2</p>
 <div class = 'add-button'>
   <button onclick='addButton()'>増えるボタン</button>
 </div>
 
+<div class="border"></div>
+
+<!-- イベントリスナーとイベントハンドラ -->
+<p>イベントリスナーとイベントハンドラ</p>
+<button id='eventL'>イベントリスナーボタン</button>
+<br>
+<button id='eventH'>イベントハンドラボタン</button>
+
+
+<!-- JS部 -->
 <script>
+  // イベントオブジェクトボタン用
   button = document.getElementById('element');
   console.log(button);
 
@@ -22,6 +34,16 @@
     console.log(event.currentTarget);
     console.log(`${event.clientX} : ${event.clientY}`);
     console.log(event.altKey);
+  });
+
+  // イベントリスナーとイベントハンドラ
+  
+
+  // Enter押したら発火
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      alert('You pressed the Enter key!');
+    }
   });
 
 </script>
