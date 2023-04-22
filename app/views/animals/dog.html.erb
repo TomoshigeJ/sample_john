@@ -37,7 +37,25 @@
   });
 
   // イベントリスナーとイベントハンドラ
-  
+  const buttonL = document.querySelector('#eventL');
+  const buttonH = document.querySelector('#eventH');
+
+  // イベントリスナー
+  buttonL.addEventListener('click', function() {
+    console.log('1つ目の処理');
+  });
+  buttonL.addEventListener('click', function() {
+    console.log('2つ目の処理');
+  });
+
+  //　イベントハンドラ
+  buttonH.onclick = function() {
+    console.log('1つ目の処理');
+  }
+
+  buttonH.onclick = function() {
+    console.log('2つ目の処理');
+  }
 
   // Enter押したら発火
   document.addEventListener('keydown', function(event) {
