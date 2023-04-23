@@ -1,0 +1,10 @@
+$font_color: blue;
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: $font_color;
+  margin-top: 60px;
+}
