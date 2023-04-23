@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       get 'jsapp'
       get 'jsapp2'
       get 'jsapp3'
+      get 'jsapp4'
     end
   end
 

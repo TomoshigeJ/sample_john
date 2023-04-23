@@ -27,6 +27,7 @@ class AnimalsController < ApplicationController
   def jsapp; end
   def jsapp2; end
   def jsapp3; end
+  def jsapp4; end
 
   private
 
