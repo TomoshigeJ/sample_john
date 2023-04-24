@@ -1,0 +1,2 @@
+class DogMailer < ApplicationMailer
+end
