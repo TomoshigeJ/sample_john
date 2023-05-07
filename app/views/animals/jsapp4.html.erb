@@ -4,10 +4,9 @@
 
 <div class='m-4'>hot_dog</div>
 
-<script>
-console.log(1);
-console.log(2);
-console.log(3);
-console.log(4);
-console.log(5);
+<script src="https://cdnjs.cloudflare.com/ajax/libs/decimal.js/10.4.2/decimal.min.js">
+  // decimal.jsを使用してみる(Consoleでテストする)
+  let d1 = new Decimal('0.14');
+  let d2 = new Decimal('0.28');
+  console.log(d1.add(d2).toNumber());
 </script>
